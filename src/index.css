@@ -1,1 +1,46 @@
 @import "tailwindcss";
+
+* {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+}
+
+html, body {
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+/* Smooth animations */
+button {
+  transition: all 0.15s ease;
+}
+
+/* Canvas rendering */
+canvas {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
+
+/* Prevent text selection on game area */
+.select-none {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* D-pad button press effect */
+button:active {
+  transform: scale(0.92);
+}
+
+/* Scrollbar hide */
+::-webkit-scrollbar {
+  display: none;
+}
